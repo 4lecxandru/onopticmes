@@ -1,6 +1,7 @@
 'use strict';
 const BootBot = require('bootbot');
 const config = require('config');
+const port = process.env.PORT || 3000;
 
 const bot = new BootBot({
   accessToken: "EAARZAGWah0CcBAJgFIrGKGJunu5tPozbO9IZAToSmpJeNZCGtwUWhSDkRtNFjoqlQygtI9vT4EYAo7t5iz4vfy2OSaiFatqlfblgnPzZCp1ZCp3uU2Tfy0ZAgvgcaGlxV8oevz2EP3lcTLWSPEV8WRbs8pZAwCg8SB637TZCt0GxZC6Q3XVzZBXEe8",
