@@ -1,9 +1,10 @@
 'use strict';
 const BootBot = require('bootbot');
 const config = require('config');
+const port = process.env.PORT || 3000;
 
 const bot = new BootBot({
-  accessToken: "EAARZAGWah0CcBAJgFIrGKGJunu5tPozbO9IZAToSmpJeNZCGtwUWhSDkRtNFjoqlQygtI9vT4EYAo7t5iz4vfy2OSaiFatqlfblgnPzZCp1ZCp3uU2Tfy0ZAgvgcaGlxV8oevz2EP3lcTLWSPEV8WRbs8pZAwCg8SB637TZCt0GxZC6Q3XVzZBXEe8",
+  accessToken: "EAARZAGWah0CcBAJOOVXIsrgFvZALvTUSdbfsmy5d4QJXJ91gWai4pGjRXpu5fgWh7FCSgNplKlM63X6XbS0JjJjTojUzjfLKXceIxk8p2JSpLadSOia6ADhzOoiBw6txSGY1uzBLuSS5APSNz5Nxz970uLXr3mpBzH3cFCmZAwAftyfjZA9K",
   verifyToken:"brooooooooooooooo",
   appSecret: "19e2da46ef6c1e2c62579c3e074125a3"
 
@@ -95,13 +96,38 @@ bot.hear('exemplu1', (payload, chat) => {
   });
 });
 
-bot.hear('duhul', (payload, chat) => {
-  chat.say('Duhul din lampă:', { typing: true }).then(() => (
+bot.hear('firma', (payload, chat) => {
+  chat.say('Optica medicala si oftamologie Ochelari de vedere adulti si copii Ochelari de soare adulti si copii. ', { typing: true }).then(() => (
     chat.say({
-      text: 'Alege o dorință',
-      quickReplies: ['O arăboaică', 'Lamborghini', 'Aur', 'Elder Scrolls 6']
+      text: 'Descoperiti mai multe:',
+      quickReplies: ['optica','rame', 'website', 'contact']
     })
   ));
+});
+
+bot.hear('optica', (payload, chat) => {
+  chat.say('Oferim cele mai bune servicii in raport calitate-pret ', { typing: true }).then(() => (
+    chat.say({
+      text: 'Descoperiti mai multe:',
+      quickReplies: ['firma','rame', 'website', 'contact']
+    })
+  ));
+});
+
+bot.hear('optica', (payload, chat) => {
+  chat.say('Avem o selectie de rame variata, atat ca design cat si pret ', { typing: true }).then(() => (
+    chat.say({
+      text: 'Descoperiti-le pe onoptic.ro'
+    })
+  ));
+});
+
+bot.hear('website', (payload, chat) => {
+  chat.say('Mai multe detalii pe onoptic.ro' , { typing: true })
+});
+
+bot.hear('contact', (payload, chat) => {
+  chat.say('Ne puteti gasi pe strada Str. Viilor 52, Cluj-Napoca. Program L-V 9-19  S 10-14 . Programare la telefon: 0786442236' , { typing: true })
 });
 
 
